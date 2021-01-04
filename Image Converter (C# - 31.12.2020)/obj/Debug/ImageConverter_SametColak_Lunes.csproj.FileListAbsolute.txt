@@ -1,0 +1,10 @@
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.csprojAssemblyReference.cache
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.Form1.resources
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.Properties.Resources.resources
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.csproj.GenerateResource.cache
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.csproj.CoreCompileInputs.cache
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\bin\Debug\ImageConverter_SametColak_Lunes.exe.config
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\bin\Debug\ImageConverter_SametColak_Lunes.exe
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\bin\Debug\ImageConverter_SametColak_Lunes.pdb
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.exe
+C:\Users\Samet\Downloads\Samet\Samet Çolak-Tasks_Lunes\Samet Colak_Tasks_Lunes(Jr. Software Developer)\ImageConverter_SametColak_Lunes\obj\Debug\ImageConverter_SametColak_Lunes.pdb
