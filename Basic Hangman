@@ -1,0 +1,89 @@
+import time
+
+name1 = input("1st player name:")
+name2 = input("2nd player name:")
+
+print("Hello, " + name1 + "and " + name2 + ".", "Time to play hangman!")
+
+time.sleep(1)
+
+
+def hangman():
+
+    word1 = str(input("Okay, " + name1 + "." + " Write down your secret word: "))
+    print("***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n")
+    guesses = ''
+    turns = 10
+
+    while turns > 0:
+
+        failed = 0
+
+        for char in word1:
+            if char in guesses:
+                print(char)
+
+            else:
+                print("_")
+                failed += 1
+
+        if failed == 0:
+            print("You won! The word is ", word1)
+            break
+
+        guess = input("Guess a character:")
+        guesses += guess
+
+        if guess not in word1:
+            turns -= 1
+            print("Wrong")
+            print("You have", + turns, "more guesses")
+            if turns == 0:
+                print("You lose!")
+
+    print("Please wait..")
+    time.sleep(2)
+
+    word2 = str(input("Okay, " + name2 + "." + " It is your turn. Write down your secret word: "))
+    print("***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n***\n")
+
+    guesses = ''
+    turns = 10
+
+    while turns > 0:
+
+        failed = 0
+
+        for char in word2:
+            if char in guesses:
+                print(char)
+
+            else:
+                print("_")
+                failed += 1
+
+        if failed == 0:
+            print("You won! The word is ", word1)
+            break
+
+        guess = input("Guess a character:")
+        guesses += guess
+
+        if guess not in word1:
+            turns -= 1
+            print("Wrong")
+            print("You have", + turns, "more guesses")
+            if turns == 0:
+                print("You lose!")
+
+
+hangman()
+
+pre = input("Would you like to play again?")
+
+if pre == "yes":
+    hangman()
+
+else:
+    print("BYE!!!")
+    exit()
