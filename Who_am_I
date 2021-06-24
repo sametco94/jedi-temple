@@ -1,0 +1,176 @@
+print("WELCOME TO THE GAME ''WHO AM I?''")
+
+print("\nChoose and keep in mind one of the following persons. Then, answer the questions as Yes or No, please!")
+
+print("\n-Angela Merkel-\t-Vladimir Putin-\t-Michael Jackson-\t-Marion Cotillard-\t-Wonder Women-")
+print("-Tony Stark-\t-Cristiano Ronaldo-\t-Lionel Messi-\t\t-Barack Obama-\t\t-Dwayne Johnson-")
+print("-Brad Pitt-\t\t-Rihanna-\t\t\t-Maria Sharapova-\t-Benazir Butto-\t\t-Margaret Thatcher-\n")
+
+yes = ("YES, Yes, yes, Y, y, YEAP, yeap, YEAH, yeah")
+no = ("NO, No, no, N, y, NOPE, nope, NAH, nah")
+
+
+def game_func():
+
+    g = "x"
+    f = "x"
+    a = "x"
+    p = "x"
+    s = "x"
+    h = "x"
+    e = "x"
+
+    def gender_func():
+        nonlocal g
+        g = str(input("Am I a woman?\t"))
+        if  g in yes or g in no:
+            reality_func()
+        else:
+            print("Please enter a valid answer!")
+            gender_func()
+
+    def reality_func():
+        nonlocal f
+        f = str(input("Am I a fictional character?\t"))
+        if f in yes or f in no:
+            alive_func()
+        else:
+            print("Please enter a valid answer!")
+            reality_func()
+
+    def alive_func():
+        nonlocal a
+        a = str(input("Am I a still alive?\t"))
+        if a in yes or a in no:
+            politic_func()
+        else:
+            print("Please enter a valid answer!")
+            alive_func()
+
+    def politic_func():
+        nonlocal p
+        p = str(input("Am I a politician?\t"))
+        if p in yes:
+            hair_func()
+        elif p in no:
+            sport_func()
+        else:
+            print("Please enter a valid answer!")
+            politic_func()
+
+    def sport_func():
+        nonlocal s
+        s = str(input("Am I a sporter?\t"))
+        if s in yes or s in no:
+            hair_func()
+        else:
+            print("Please enter a valid answer!")
+            sport_func()
+
+    def hair_func():
+        nonlocal h
+        h = str(input("Am I a blonde?\t"))
+        if h in yes or h in no:
+            european_func()
+        else:
+            print("Please enter a valid answer!")
+            hair_func()
+
+    def european_func():
+        nonlocal e
+        e = str(input("Am I a European?\t"))
+        if e in yes or e in no:
+            result_func()
+        else:
+            print("Please enter a valid answer!")
+            european_func()
+
+    def result_func():
+
+        if g in yes and f in no and a in yes and p in yes and h in yes and e in yes:
+            print("So, I am 'Angela Merkel'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in yes and h in yes and e in no:
+            print("So, I am 'Vladimir Putin'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in no and p in no and s in no and h in no and e in no:
+            print("So, I am 'Michael Jackson'! Right?")
+            playagain_func()
+
+        elif g in yes and f in no and a in yes and p in no and s in no and h in no and e in yes:
+            print("So, I am 'Marion Cotillard'! Right?")
+            playagain_func()
+
+        elif g in yes and f in yes and a in yes and p in no and s in no and h in no and e in no:
+            print("So, I am 'Wonder Woman'! Right?")
+            playagain_func()
+
+        elif g in no and f in yes and a in no and p in no and s in no and h in no and e in no:
+            print("So, I am 'Tony Stark'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in no and s in yes and h in no and e in yes:
+            print("So, I am 'Cristiano Ronaldo'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in no and s in yes and h in no and e in no:
+            print("So, I am 'Lionel Messi'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in yes and h in no and e in no:
+            print("So, I am 'Barack Obama'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in no and s in no and h in no and e in no:
+            print("So, I am 'Dwayne Johnson'! Right?")
+            playagain_func()
+
+        elif g in no and f in no and a in yes and p in no and s in no and h in yes and e in no:
+            print("So, I am 'Brad Pitt'! Right?")
+            playagain_func()
+
+        elif g in yes and f in no and a in yes and p in no and s in no and h in no and e in no:
+            print("So, I am 'Rihanna'! Right?")
+            playagain_func()
+
+        elif g in yes and f in no and a in yes and p in no and s in yes and h in yes and e in no:
+            print("So, I am 'Maria Sharapova'! Right?")
+            playagain_func()
+
+        elif g in yes and f in no and a in no and p in yes and h in no and e in no:
+            print("So, I am 'Benazir Butto'! Right?")
+            playagain_func()
+
+        elif g in yes and f in no and a in no and p in yes and h in no and e in yes:
+            print("So, I am 'Margaret Thatcher'! Right?")
+            playagain_func()
+
+        else:
+            return 0
+
+    def restart_func():
+        print(
+            "\nChoose and keep in mind one of the following persons. Then, answer the questions as Yes or No, please!")
+
+        print("\n-Angela Merkel-\t-Vladimir Putin-\t-Michael Jackson-\t-Marion Cotillard-\t-Wonder Women-")
+        print("-Tony Stark-\t-Cristiano Ronaldo-\t-Lionel Messi-\t\t-Barack Obama-\t\t-Dwayne Johnson-")
+        print("-Brad Pitt-\t\t-Rihanna-\t\t\t-Maria Sharapova-\t-Benazir Butto-\t\t-Margaret Thatcher-\n")
+        gender_func()
+
+    def playagain_func():
+        rep = str(input("\n\nWould you like to play again?"))
+        if rep in yes:
+            restart_func()
+        elif rep in no:
+            print("Okay, thanks for playing!")
+            return 0
+        else:
+            print("Please enter a valid answer!")
+            playagain_func()
+
+    gender_func()
+
+
+game_func()
