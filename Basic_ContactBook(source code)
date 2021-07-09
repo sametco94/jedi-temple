@@ -1,0 +1,80 @@
+import sqlite3
+
+yes = ("YES, Yes, yes, Y, y, YEAP, yeap, YEAH, yeah")
+no = ("NO, No, no, N, y, NOPE, nope, NAH, nah")
+
+conn = sqlite3.connect('mydatabase.db')
+cursor = conn.cursor()
+
+cursor.execute("CREATE TABLE contacts(fname char(50) NOT NULL, lname char(50) NOT NULL, number int(10) NOT NULL, sex char(1), cty char(30), twn char(30), comp char(50), nick nvarchar(30));")
+
+
+def add_contact():
+    fname = input("Firstname: ")
+    lname = input("Lastname: ")
+    number = input("Number(without '0' in the beginning): ")
+    sex = input("Gender(F/M): ")
+    cty = input("City: ")
+    twn = input("Town: ")
+    comp = input("Company(if related): ")
+    nick = input("Nickname(optional): ")
+    cursor.execute(
+                   """
+                   INSERT INTO contacts(fname, lname, number, sex, cty, twn, comp, nick) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                   """,
+                   (fname, lname, number, sex, cty, twn, comp, nick)
+                  )
+    conn.commit()
+
+
+def remove_data():
+    fname = input("Enter the firstname to remove: ")
+    lname = input("Enter the lastname to remove: ")
+    cursor.execute(
+                    """
+                    DELETE FROM contacts WHERE fname=? AND lname=?
+                    """,
+                    (fname, lname)
+                   )
+    print("All the data for", fname, lname, "removed!")
+    list_all()
+
+
+def list_all():
+    print("---CONTACT LIST---")
+    cursor.execute("SELECT * FROM contacts")
+    results = cursor.fetchall()
+    for result in results:
+        print(result)
+
+def run_program():
+    def keep_running():
+        cnt = input("\nWould you like to do something else? ")
+        if cnt in yes:
+            run_program()
+        elif cnt in no:
+            return 0
+        else:
+            print("\nPlease enter valid number!")
+            keep_running()
+    print("\nWelcome!\n")
+    print("1. ADD CONTACT\n2. LIST ALL CONTACTS\n3. REMOVE CONTACT\n")
+    action = input("Please enter what you'd like to do: ")
+    if action == "1":
+        add_contact()
+        keep_running()
+
+    elif action == "2":
+        list_all()
+        keep_running()
+
+    elif action == "3":
+        remove_data()
+
+        keep_running()
+    else:
+        print("\nPlease enter valid number!")
+        run_program()
+
+
+run_program()
